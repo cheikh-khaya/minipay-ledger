@@ -1,0 +1,11 @@
+# Optional: starts a local PostgreSQL 16 for running the API.
+# Not needed for the tests, which use an in-memory H2 database.
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: minipay
+      POSTGRES_USER: minipay
+      POSTGRES_PASSWORD: minipay
+    ports:
+      - "5433:5432"
